@@ -1,6 +1,8 @@
 <?php
 	class SelectionController extends AppController{
-		public function display_result(){
-			echo "TESTING";
+		
+		public function index(){
+			// $data = $this->request->input('data');
+			// echo json_encode($data);
 		}
 	}

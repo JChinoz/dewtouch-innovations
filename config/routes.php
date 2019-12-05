@@ -45,6 +45,14 @@ use Cake\Routing\Route\DashedRoute;
  */
 Router::defaultRouteClass(DashedRoute::class);
 
+Router::scope(
+    '/Record',
+    ['controller' => 'Record'],
+    function($routes){
+        $routes->connect('/filter/*', ['action'=>'filter']);
+    }
+);
+
 Router::scope('/', function (RouteBuilder $routes) {
     // Register scoped middleware for in scopes.
     $routes->registerMiddleware('csrf', new CsrfProtectionMiddleware([

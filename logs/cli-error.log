@@ -1,0 +1,48 @@
+2019-12-03 07:52:38 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dewtouch.selection' doesn't exist in C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 132
+Stack Trace:
+#0 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'selection', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(62): Cake\Database\Schema\Collection->describe('selection', Array)
+#2 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\ORM\Table.php(559): Cake\Database\Schema\CachedCollection->describe('selection')
+#3 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\ORM\Table.php(684): Cake\ORM\Table->getSchema()
+#4 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'selection', 'Selection')
+#7 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Selection')
+#8 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Selection')
+#9 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Selection', 0)
+#10 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#11 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('Selection')
+#12 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\xampp\htdocs\dewtouch-innovations\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dewtouch.selection' doesn't exist in C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 38
+Stack Trace:
+#0 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(38): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Connection.php(349): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Connection.php(352): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Connection.php(301): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Connection.php(305): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(130): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'selection', Array, Object(Cake\Database\Schema\TableSchema))
+#9 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(62): Cake\Database\Schema\Collection->describe('selection', Array)
+#10 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\ORM\Table.php(559): Cake\Database\Schema\CachedCollection->describe('selection')
+#11 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\ORM\Table.php(684): Cake\ORM\Table->getSchema()
+#12 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#13 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#14 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'selection', 'Selection')
+#15 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Selection')
+#16 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Selection')
+#17 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Selection', 0)
+#18 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#19 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('Selection')
+#20 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#21 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#22 C:\xampp\htdocs\dewtouch-innovations\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#23 {main}
+
+

@@ -52,35 +52,39 @@
 <script>
 
 $(document).ready(function(){
+	var id;
 	var baseUrl = '<?php echo $this->base; ?>'
-	var selectionUrl = document.domain + baseUrl + '/Selection/display_result';
+	var selectionUrl = document.domain + baseUrl + '/Selection';
 	$(".dialog").dialog({
-		autoOpen: false,
-		width: '500px',
-		modal: true,
-		dialogClass: 'ui-dialog-blue',
-		buttons : {
-			"save":{
-			text:'Save',
-			click: function(){
-				$.ajax({
-					dataType: "html",
-					type: "POST",
-					evalScripts: true,
-					url: selectionUrl,
-					data: {int: 1},
-					success: function (data){
-						return true;
-					}
-				});
+			autoOpen: false,
+			width: '500px',
+			modal: true,
+			dialogClass: 'ui-dialog-blue',
+			buttons : {
+				"save":{
+				text:'Save',
+				click: function(){
+					$.ajax({
+						dataType: "html",
+						type: "POST",
+						// evalScripts: true,
+						// url: baseUrl + '/Selection',
+						// data: $(this).data('id'),
+						success: function (data){
+							var element = $('#'+id);
+							console.log(element[0]);
+							// window.location.href = baseUrl + '/Selection';
+							$(window.open().document.body).html(element[0]);
+						}
+					});
+				}
 			}
-    	}
-	}
-});
+		}
+	});
 	
 	$(".showDialog").hover(function()
 	{ 
-		var id = $(this).data('id'); $("#"+id).dialog('open'); 
+		id = $(this).data('id'); $("#"+id).dialog('open'); 
 	});
 
 })

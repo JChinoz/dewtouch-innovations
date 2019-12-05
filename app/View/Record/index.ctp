@@ -20,9 +20,18 @@
 <?php $this->start('script_own')?>
 <script>
 $(document).ready(function(){
-	$("#table_records").dataTable({
-
+	var baseUrl = '<?php echo $this->base; ?>'
+	var tableRecords = $("#table_records").DataTable({
+		// "iDisplayLength": 10,
+        // "bProcessing": true,
+        // "bServerSide": true,
+        // "sAjaxSource": baseUrl+"Record",
 	});
+
+	$('select').on("change", function() {
+		tableRecords.ajax.reload();
+		console.log("TESTING");
+    });
 })
 </script>
 <?php $this->end()?>
