@@ -46,3 +46,203 @@ Stack Trace:
 #23 {main}
 
 
+2019-12-14 18:37:29 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dewtouch.member' doesn't exist in C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 132
+Stack Trace:
+#0 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'member', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(62): Cake\Database\Schema\Collection->describe('member', Array)
+#2 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\ORM\Table.php(559): Cake\Database\Schema\CachedCollection->describe('member')
+#3 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\ORM\Table.php(684): Cake\ORM\Table->getSchema()
+#4 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'member', 'Member')
+#7 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Member')
+#8 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\Shell.php(531): Bake\Shell\Task\ModelTask->main('Member')
+#9 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#10 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#11 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#12 C:\xampp\htdocs\dewtouch-innovations\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#13 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dewtouch.member' doesn't exist in C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 38
+Stack Trace:
+#0 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(38): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Connection.php(349): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Connection.php(352): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Connection.php(301): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Connection.php(305): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(130): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'member', Array, Object(Cake\Database\Schema\TableSchema))
+#9 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(62): Cake\Database\Schema\Collection->describe('member', Array)
+#10 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\ORM\Table.php(559): Cake\Database\Schema\CachedCollection->describe('member')
+#11 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\ORM\Table.php(684): Cake\ORM\Table->getSchema()
+#12 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#13 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#14 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'member', 'Member')
+#15 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Member')
+#16 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\Shell.php(531): Bake\Shell\Task\ModelTask->main('Member')
+#17 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#18 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#19 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#20 C:\xampp\htdocs\dewtouch-innovations\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2019-12-14 18:46:33 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dewtouch.member' doesn't exist in C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 132
+Stack Trace:
+#0 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'member', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(62): Cake\Database\Schema\Collection->describe('member', Array)
+#2 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\ORM\Table.php(559): Cake\Database\Schema\CachedCollection->describe('member')
+#3 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\ORM\Table.php(684): Cake\ORM\Table->getSchema()
+#4 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'member', 'Member')
+#7 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Member')
+#8 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Member')
+#9 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Member', 0)
+#10 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#11 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('Member')
+#12 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\xampp\htdocs\dewtouch-innovations\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dewtouch.member' doesn't exist in C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 38
+Stack Trace:
+#0 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(38): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Connection.php(349): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Connection.php(352): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Connection.php(301): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Connection.php(305): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(130): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'member', Array, Object(Cake\Database\Schema\TableSchema))
+#9 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(62): Cake\Database\Schema\Collection->describe('member', Array)
+#10 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\ORM\Table.php(559): Cake\Database\Schema\CachedCollection->describe('member')
+#11 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\ORM\Table.php(684): Cake\ORM\Table->getSchema()
+#12 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#13 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#14 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'member', 'Member')
+#15 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Member')
+#16 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Member')
+#17 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Member', 0)
+#18 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#19 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('Member')
+#20 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#21 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#22 C:\xampp\htdocs\dewtouch-innovations\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#23 {main}
+
+
+2019-12-14 18:47:16 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dewtouch.member' doesn't exist in C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 132
+Stack Trace:
+#0 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'member', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(62): Cake\Database\Schema\Collection->describe('member', Array)
+#2 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\ORM\Table.php(559): Cake\Database\Schema\CachedCollection->describe('member')
+#3 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\ORM\Table.php(684): Cake\ORM\Table->getSchema()
+#4 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'member', 'Member')
+#7 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Member')
+#8 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\Shell.php(531): Bake\Shell\Task\ModelTask->main('Member')
+#9 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#10 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#11 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#12 C:\xampp\htdocs\dewtouch-innovations\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#13 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dewtouch.member' doesn't exist in C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 38
+Stack Trace:
+#0 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(38): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Connection.php(349): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Connection.php(352): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Connection.php(301): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Connection.php(305): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(130): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'member', Array, Object(Cake\Database\Schema\TableSchema))
+#9 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(62): Cake\Database\Schema\Collection->describe('member', Array)
+#10 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\ORM\Table.php(559): Cake\Database\Schema\CachedCollection->describe('member')
+#11 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\ORM\Table.php(684): Cake\ORM\Table->getSchema()
+#12 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#13 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#14 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'member', 'Member')
+#15 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Member')
+#16 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\Shell.php(531): Bake\Shell\Task\ModelTask->main('Member')
+#17 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#18 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#19 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#20 C:\xampp\htdocs\dewtouch-innovations\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2019-12-14 22:40:54 Warning: Warning (512): Association property name "table" clashes with field of same name of table "transaction_items". You should explicitly specify the "propertyName" option. in [C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\ORM\Association.php, line 800]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 158
+Cake\ORM\Association::getProperty() - CORE\src\ORM\Association.php, line 800
+Bake\Shell\Task\ModelTask::getEntityPropertySchema() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 584
+Bake\Shell\Task\ModelTask::getTableContext() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 137
+Bake\Shell\Task\ModelTask::bake() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 114
+Bake\Shell\Task\ModelTask::main() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 101
+Bake\Shell\BakeShell::Bake\Shell\{closure}() - ROOT\vendor\cakephp\bake\src\Shell\BakeShell.php, line 279
+Cake\Collection\Collection::each() - CORE\src\Collection\CollectionTrait.php, line 64
+Bake\Shell\BakeShell::all() - ROOT\vendor\cakephp\bake\src\Shell\BakeShell.php, line 280
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 517
+Cake\Console\CommandRunner::runShell() - CORE\src\Console\CommandRunner.php, line 385
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 162
+[main] - ROOT\bin\cake.php, line 12
+
+
+
+2019-12-14 22:40:54 Warning: Warning (512): Association property name "table" clashes with field of same name of table "transaction_items". You should explicitly specify the "propertyName" option. in [C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\ORM\Association.php, line 800]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 158
+Cake\ORM\Association::getProperty() - CORE\src\ORM\Association.php, line 800
+Bake\Utility\Model\AssociationFilter::filterAssociations() - ROOT\vendor\cakephp\bake\src\Utility\Model\AssociationFilter.php, line 94
+Bake\Shell\Task\TemplateTask::_filteredAssociations() - ROOT\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php, line 433
+Bake\Shell\Task\TemplateTask::_loadController() - ROOT\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php, line 301
+Bake\Shell\Task\TemplateTask::main() - ROOT\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php, line 142
+Bake\Shell\BakeShell::Bake\Shell\{closure}() - ROOT\vendor\cakephp\bake\src\Shell\BakeShell.php, line 279
+Cake\Collection\Collection::each() - CORE\src\Collection\CollectionTrait.php, line 64
+Bake\Shell\BakeShell::all() - ROOT\vendor\cakephp\bake\src\Shell\BakeShell.php, line 280
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 517
+Cake\Console\CommandRunner::runShell() - CORE\src\Console\CommandRunner.php, line 385
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 162
+[main] - ROOT\bin\cake.php, line 12
+
+
+
+2019-12-14 23:05:55 Error: [Symfony\Component\Console\Exception\RuntimeException] Not enough arguments (missing: "name"). in C:\xampp\htdocs\dewtouch-innovations\vendor\symfony\console\Input\Input.php on line 76
+Stack Trace:
+#0 C:\xampp\htdocs\dewtouch-innovations\vendor\symfony\console\Command\Command.php(250): Symfony\Component\Console\Input\Input->validate()
+#1 C:\xampp\htdocs\dewtouch-innovations\vendor\symfony\console\Application.php(982): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\xampp\htdocs\dewtouch-innovations\vendor\symfony\console\Application.php(255): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Create), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\xampp\htdocs\dewtouch-innovations\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(112): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\Shell.php(531): Migrations\Shell\MigrationsShell->main('migrations', 'create')
+#6 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(172): Cake\Console\Shell->runCommand(Array, true, Array)
+#7 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#8 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#9 C:\xampp\htdocs\dewtouch-innovations\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#10 {main}
+
+
+2019-12-14 23:07:11 Error: [Symfony\Component\Console\Exception\CommandNotFoundException] Command "CustomMigration" is not defined. in C:\xampp\htdocs\dewtouch-innovations\vendor\symfony\console\Application.php on line 642
+Stack Trace:
+#0 C:\xampp\htdocs\dewtouch-innovations\vendor\symfony\console\Application.php(236): Symfony\Component\Console\Application->find('CustomMigration')
+#1 C:\xampp\htdocs\dewtouch-innovations\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(112): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\Shell.php(531): Migrations\Shell\MigrationsShell->main('migrations', 'CustomMigration')
+#4 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(172): Cake\Console\Shell->runCommand(Array, true, Array)
+#5 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#6 C:\xampp\htdocs\dewtouch-innovations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#7 C:\xampp\htdocs\dewtouch-innovations\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#8 {main}
+
+

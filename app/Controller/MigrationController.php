@@ -114,9 +114,9 @@ class MigrationController extends AppController{
 					// 		]);
 					// 	}
 					// }
-				}else{
-					$this->setFlash('Error Uploading File Contents');
-				}
+				// }else{
+				// 	$this->setFlash('Error Uploading File Contents');
+				// }
 			} else {
 				$this->setFlash('File is not of CSV format');
 			}
