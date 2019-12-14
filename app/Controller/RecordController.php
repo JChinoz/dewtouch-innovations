@@ -4,17 +4,32 @@
 		public function index(){
 			ini_set('memory_limit','256M');
 			set_time_limit(0);
-			
-			$this->setFlash('Listing Record page too slow, try to optimize it.');
 
-			if(!empty($_GET['iDisplayStart']) && !empty($_GET['iDisplayLength'])){
-				$limit = $_GET['iDisplayStart'] . ', ' . $_GET['iDisplayLength'];
-				$records = $this->Record->find('all', array(
-					'limit' => $limit
-				));
-			}else{
+			// $controllerName = $parameters = if(isset($this->request->getAttribute('iDisplayLength'));
+			// echo json_encode($controllerName);
+			// $displayLength = $this->request->getParam('iDisplayLength');
+			// echo json_encode($displayLength);
+
+			// $data = $_POST['data'];
+			// echo $data);
+
+			$this->setFlash('Listing Record page too slow, try to optimize it.');
+			
+			// if(!empty($_GET['iDisplayStart']) && !empty($_GET['iDisplayLength'])){
+			// 	$limit = $_GET['iDisplayStart'] . ', ' . $_GET['iDisplayLength'];
+			// 	$records = $this->Record->find('all', array(
+			// 			'limit' => $limit
+			// 	));
+			// }else{
+			if($this->request->isPost()){
+				$num_rows =  $this->request->data['num_rows'];
+				$records = $this->Record->find('all',[
+					'limit' => $num_rows
+				]);
+			} else {
 				$records = $this->Record->find('all');
 			}
+			// }
 			$this->set('records',$records);
 			
 			

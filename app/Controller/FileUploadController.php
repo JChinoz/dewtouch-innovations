@@ -4,7 +4,6 @@ class FileUploadController extends AppController {
 	public function index() {
 		$this->set('title', __('File Upload Answer'));
 
-		// $this->FileUpload->deleteAll();
 		// echo $_FILES["file"]["name"];
 
 		// if (!empty($_FILES["file"]["name"])) {
