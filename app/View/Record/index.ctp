@@ -22,8 +22,8 @@
 $(document).ready(function(){
 	var baseUrl = '<?php echo $this->base; ?>';
 	var tableRecords = $("#table_records").DataTable({
-		// "serverSide": true,
-		// "deferRender": true,
+		"serverSide": true,
+		"deferRender": true
 		// // "ajax": baseUrl + "/Record",
 		// "ajax": {
 		// 	"url": baseUrl + "/Record",
