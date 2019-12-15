@@ -26,8 +26,6 @@ class FileUploadController extends AppController {
 				$target_dir = "uploads/";
 				$target_file = $target_dir . basename($fileName);
 				if(move_uploaded_file($fileTmp, $target_file)){
-					// $csvContents = file($target_file, FILE_IGNORE_NEW_LINES);
-					// print_r(str_replace(" ", ",", $csvContents));
 
 					$uploadedFile = fopen($target_file, 'r');
 					$contents = fgetcsv($uploadedFile, 0, "\r");
